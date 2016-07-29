@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E1F002B1D4BC59A00085574 /* ClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E1F002A1D4BC59A00085574 /* ClockView.swift */; };
 		6E61364C1D492504004A279F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E61364B1D492504004A279F /* AppDelegate.swift */; };
 		6E61364E1D492504004A279F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E61364D1D492504004A279F /* ViewController.swift */; };
 		6E6136511D492504004A279F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E61364F1D492504004A279F /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		6E6136561D492504004A279F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E6136541D492504004A279F /* LaunchScreen.storyboard */; };
 		6E6136611D492505004A279F /* bt_testTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6136601D492505004A279F /* bt_testTests.swift */; };
 		6E61366C1D492505004A279F /* bt_testUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E61366B1D492505004A279F /* bt_testUITests.swift */; };
+		6E61367A1D492559004A279F /* NRFManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6136791D492559004A279F /* NRFManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E1F002A1D4BC59A00085574 /* ClockView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClockView.swift; sourceTree = "<group>"; };
 		6E6136481D492504004A279F /* bt_test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bt_test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E61364B1D492504004A279F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E61364D1D492504004A279F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		6E6136671D492505004A279F /* bt_testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bt_testUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E61366B1D492505004A279F /* bt_testUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bt_testUITests.swift; sourceTree = "<group>"; };
 		6E61366D1D492505004A279F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E6136791D492559004A279F /* NRFManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NRFManager.swift; path = "../../nRF8001-Swift-master/nRF8001-Swift/NRFManager.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		6E61364A1D492504004A279F /* bt_test */ = {
 			isa = PBXGroup;
 			children = (
+				6E6136791D492559004A279F /* NRFManager.swift */,
 				6E61364B1D492504004A279F /* AppDelegate.swift */,
 				6E61364D1D492504004A279F /* ViewController.swift */,
 				6E61364F1D492504004A279F /* Main.storyboard */,
 				6E6136521D492504004A279F /* Assets.xcassets */,
 				6E6136541D492504004A279F /* LaunchScreen.storyboard */,
 				6E6136571D492504004A279F /* Info.plist */,
+				6E1F002A1D4BC59A00085574 /* ClockView.swift */,
 			);
 			path = bt_test;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					6E6136471D492504004A279F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = UYERJT2YKM;
 					};
 					6E61365B1D492505004A279F = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -257,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E61364E1D492504004A279F /* ViewController.swift in Sources */,
+				6E1F002B1D4BC59A00085574 /* ClockView.swift in Sources */,
+				6E61367A1D492559004A279F /* NRFManager.swift in Sources */,
 				6E61364C1D492504004A279F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -399,10 +408,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = bt_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "raf.bt-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -410,10 +422,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = bt_test/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "raf.bt-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -482,6 +497,7 @@
 				6E6136721D492505004A279F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E6136731D492505004A279F /* Build configuration list for PBXNativeTarget "bt_testTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +506,7 @@
 				6E6136751D492505004A279F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6E6136761D492505004A279F /* Build configuration list for PBXNativeTarget "bt_testUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +515,7 @@
 				6E6136781D492505004A279F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
